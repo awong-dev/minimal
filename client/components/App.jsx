@@ -15,10 +15,11 @@ function App(props) {
   }
   return (
     <div>
-     Hi everyone. How are you?
-     <LowResClock />
-    <div className="app">
-      {rows}
+      Hi everyone. How are you?
+      <LowResClock />
+      <div className="app">
+        {rows}
+      </div>
     </div>
   );
 }
