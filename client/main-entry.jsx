@@ -2,6 +2,8 @@ import App from './components/App'
 import React from 'react';
 import ReactDOM from 'react-dom'
 
+require ('../sass/style.scss');
+
 function initReact() {
   if (process.env.NODE_ENV === 'development') {
     const { AppContainer } = require('react-hot-loader');
