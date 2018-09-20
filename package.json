@@ -10,7 +10,7 @@
     "deploy": "npm run webpack && firebase deploy",
     "lint:js": "eslint --quiet --ext .js --ext .jsx client device",
     "start": "node index.js",
-    "test": "mocha --compilers js:babel-register --recursive test/**/*.spec.js -t 30000",
+    "test": "mocha --compilers js:@babel/register --recursive test/**/*.spec.js -t 30000",
     "watch": "NODE_ENV='development' nodemon index.js & BABEL_ENV=hot webpack-dev-server --config webpack-hot.config.js",
     "webpack": "NODE_ENV='production' webpack -p --config webpack.config.js",
     "postinstall": "webpack"
@@ -23,6 +23,7 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.2",
     "css-hot-loader": "^1.4.2",
     "css-loader": "^1.0.0",
