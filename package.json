@@ -1,0 +1,33 @@
+{
+  "name": "minimal",
+  "description": "Minimal hot react example",
+  "repository": "https://github.com/awong-dev/minimal.git",
+  "dependencies": {
+    "express": "^4.16.3",
+    "winston": "^3.1.0"
+  },
+  "scripts": {
+    "deploy": "npm run webpack && firebase deploy",
+    "firebase": "firebase",
+    "lint:js": "eslint --quiet --ext .js --ext .jsx client device",
+    "start": "node index.js",
+    "test": "mocha --compilers js:babel-register --recursive test/**/*.spec.js -t 30000",
+    "watch": "NODE_ENV='development' nodemon index.js & BABEL_ENV=hot webpack-dev-server --config webpack-hot.config.js",
+    "webpack": "NODE_ENV='production' webpack -p --config webpack.config.js"
+  },
+  "author": "Albert J. Wong",
+  "license": "BSD-2-Clause",
+  "keywords": [],
+  "private": true,
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^5.2.0",
+    "react": "^16.5.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
