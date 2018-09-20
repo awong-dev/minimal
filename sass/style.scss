@@ -1,0 +1,15 @@
+@import '~foundation-sites/scss/foundation';
+
+@include foundation-xy-grid-classes
+
+.app {
+  background-color: blue;
+  color: red;
+}
+
+.left {
+  font-size: large;
+}
+.right {
+  background-color: green;
+}

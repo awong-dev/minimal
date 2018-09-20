@@ -2,7 +2,7 @@ import App from './components/App'
 import React from 'react';
 import ReactDOM from 'react-dom'
 
-require("../sass/style.scss");
+require ('../sass/style.scss');
 
 function initReact() {
   if (process.env.NODE_ENV === 'development') {
