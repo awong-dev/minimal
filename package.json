@@ -12,7 +12,8 @@
     "start": "node index.js",
     "test": "mocha --compilers js:babel-register --recursive test/**/*.spec.js -t 30000",
     "watch": "NODE_ENV='development' nodemon index.js & BABEL_ENV=hot webpack-dev-server --config webpack-hot.config.js",
-    "webpack": "NODE_ENV='production' webpack -p --config webpack.config.js"
+    "webpack": "NODE_ENV='production' webpack -p --config webpack.config.js",
+    "postinstall": "webpack"
   },
   "author": "Albert J. Wong",
   "license": "BSD-2-Clause",
